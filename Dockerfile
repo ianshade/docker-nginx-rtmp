@@ -46,9 +46,9 @@ RUN cd /tmp/nginx-${NGINX_VERSION} && \
   ./configure \
   --prefix=/opt/nginx \
   --add-module=/tmp/nginx-rtmp-module-${NGINX_RTMP_VERSION} \
-  --conf-path=/opt/nginx/nginx.conf \
-  --error-log-path=/opt/nginx/logs/error.log \
-  --http-log-path=/opt/nginx/logs/access.log \
+  --conf-path=/opt/nginx/vol/nginx.conf \
+  --error-log-path=/opt/nginx/vol/logs/error.log \
+  --http-log-path=/opt/nginx/vol/logs/access.log \
   --with-debug && \
   cd /tmp/nginx-${NGINX_VERSION} && make && make install
 
